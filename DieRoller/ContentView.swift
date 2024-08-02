@@ -20,7 +20,7 @@ struct ContentView: View {
                             .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).foregroundColor(.red)
                         DieFacesNames(numberOfPips: numberOfPipsR)
                             .font(.largeTitle)
-                    }
+                    }.foregroundColor(.white)
                     .padding()
                     
                     .padding()
@@ -29,11 +29,11 @@ struct ContentView: View {
                     numberOfPipsR = Int.random(in: 1...6)
                 }
                 .frame(width: 250.0, height: 50)
-                .background(Color.blue)
+                .background(.red)
                 .foregroundColor(.white)
                 .cornerRadius(15)
             }
-            .padding(50)
+            .padding(50).background(.black).scaledToFill()
     }
 }
 
@@ -50,7 +50,7 @@ struct diefaces: View {
         Image(systemName: "die.face.\(numberOfPips).fill")
             .resizable()
             .frame(width: 150, height: 150)
-            .foregroundColor(.red)
+            .foregroundColor(.white)
     }
 }
 
