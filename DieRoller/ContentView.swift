@@ -6,8 +6,6 @@ struct ContentView: View {
     
     var body: some View {
             VStack {
-                
-                VStack {
                     HStack {
                         
                         diefaces(numberOfPips: numberOfPipsL)
@@ -17,20 +15,20 @@ struct ContentView: View {
                     }
                     HStack {
                         DieFacesNames(numberOfPips: numberOfPipsL)
-                            .font(.title)
-                        Text(" - ").font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                            .font(.largeTitle)
+                        Text("  -  ")
+                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/).foregroundColor(.red)
                         DieFacesNames(numberOfPips: numberOfPipsR)
-                            .font(.title)
+                            .font(.largeTitle)
                     }
                     .padding()
                     
-                }
-                Spacer()
+                    .padding()
                 Button("Roll") {
                     numberOfPipsL = Int.random(in: 1...6)
                     numberOfPipsR = Int.random(in: 1...6)
                 }
-                .frame(width: 200.0, height: 50)
+                .frame(width: 250.0, height: 50)
                 .background(Color.blue)
                 .foregroundColor(.white)
                 .cornerRadius(15)
@@ -51,7 +49,7 @@ struct diefaces: View {
     var body: some View {
         Image(systemName: "die.face.\(numberOfPips).fill")
             .resizable()
-            .frame(width: 100, height: 100)
+            .frame(width: 150, height: 150)
             .foregroundColor(.red)
     }
 }
