@@ -16,6 +16,6 @@ Tap the roll button to roll the dice.
 
 🔧 Setup and Installation
 
-Clone this repository: 
+Clone this repository: `https://github.com/WinterSolid/DieRoller.git`
 - Open the project in Xcode usingDiceRollerApp.xcodeproj
 - Build and run the app on your device or the iOS Simulator.
