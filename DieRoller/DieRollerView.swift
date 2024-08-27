@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ContentView: View {
+struct DieRollerView: View {
     @State private var numberOfPipsL = 1
     @State private var numberOfPipsR = 1
     
@@ -27,7 +27,7 @@ struct ContentView: View {
                 Button("Roll") {
                     numberOfPipsL = Int.random(in: 1...6)
                     numberOfPipsR = Int.random(in: 1...6)
-                }
+                }.font(.largeTitle)
                 .frame(width: 250.0, height: 50)
                 .background(.red)
                 .foregroundColor(.white)
@@ -39,7 +39,8 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        DieRollerView()
+            
     }
 }
 
